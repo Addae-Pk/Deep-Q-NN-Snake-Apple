@@ -1,10 +1,9 @@
 # Deep-Reinforcement-Learning-QDN-Snake-Apple
-MLSMM2154 : Project part 2.2  [Snake Game with Deep Q-Network(DQN)]                      
+ [Snake Game with Deep Q-Network(DQN)]                      
 
-In this part of the project, I designed a  Snake and apple game that has 
-an AI agent that aims to learn and solve the Snake and Apple game using the Deep
-Q-Network (DQN). This RL algorithm was choosed to deepen our use and
-implementation of the Q-learning method.
+RL project, with a designed Snake and apple game that has 
+an AI agent that trys to learn & solve the  game using the Deep
+Q-Network (DQN).
 
 
 
