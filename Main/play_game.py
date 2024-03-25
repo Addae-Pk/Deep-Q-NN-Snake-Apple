@@ -4,17 +4,17 @@ import numpy as np
 import pygame
 
 
-# Prompt for the filename of the trained model
+#Prompt for the filename of the trained model
 model_filename = input("Enter the filename of the trained model (e.g., model_episodes_15.h5): ")
 
 # Load the trained model
 agent = DQNAgent(state_size=5 + 30, action_size=4)
 agent.model.load_weights(model_filename)
 
-# Create the environment
+#Create the environment
 env = SnakeEnv()
 
-# Run the game loop
+#Run game loop
 running = True
 while running:
     state = env.reset()
