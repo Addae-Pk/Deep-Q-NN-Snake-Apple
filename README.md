@@ -2,7 +2,7 @@
  [Snake Game with Deep Q-Network(DQN)]                      
 
 RL project, with a designed Snake and apple game that has 
-an AI agent that trys to learn & solve the  game using the Deep
+an AI agent that trys to learn & solve the  game using a Deep
 Q-Network (DQN).
 
 
