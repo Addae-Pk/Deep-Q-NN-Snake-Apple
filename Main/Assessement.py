@@ -3,7 +3,7 @@ from qdn import DQNAgent
 import numpy as np
 from sklearn.metrics import accuracy_score, mean_squared_error
 
-# Prompt the user for the model filename
+#Prompt model filename
 model_filename = input("Enter the filename of the trained model (e.g., model_episodes_200.h5): ")
 
 # Determine the number of episodes based on the model filename
@@ -21,15 +21,15 @@ else:
     print("Invalid model filename. Exiting the assessment.")
     exit()
 
-# Load the trained model
+#Load
 agent = DQNAgent(state_size=35, action_size=4)
 agent.model.load_weights(model_filename)
 
-# Create the environment
+
 env = SnakeEnv()
 max_steps = env.max_steps  # Maximum number of steps per episode
 
-# Evaluate the performance (Effectiveness metric)
+#Evaluate the performance (Effectiveness metric)
 effectiveness = []
 
 for _ in range(num_episodes):
@@ -47,13 +47,13 @@ for _ in range(num_episodes):
 
     effectiveness.append(steps / max_steps)
 
-# Calculate accuracy and MSE
+#Accuracy and MSE
 ground_truth_labels = np.zeros(num_episodes)
 predictions = np.array(effectiveness) * max_steps
 accuracy = accuracy_score(ground_truth_labels, predictions)
 mse = mean_squared_error(ground_truth_labels, predictions)
 
-# Print the evaluation results
+#Print the evaluation results
 print("Effectiveness:", np.mean(effectiveness))
 print("Accuracy:", accuracy)
 print("MSE:", mse)
