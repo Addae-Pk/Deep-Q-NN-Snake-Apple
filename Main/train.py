@@ -33,10 +33,10 @@ def train_dqn(env, agent, num_episodes, max_steps):
 
     return rewards_per_episode, steps_per_episode
 
-# Create the environment
+
 env = SnakeEnv()
 
-# Define the list of num_episodes
+#Define the list of num_episodes
 num_episodes_list = [15, 50, 100,200, 250] #10000
 
 # Train the agent for each number of episodes
@@ -45,10 +45,10 @@ for num_episodes in num_episodes_list:
     agent = DQNAgent(state_size=35, action_size=4, learning_rate=0.001,
                     gamma=0.99, epsilon=1.0, epsilon_decay=0.999, epsilon_min=0.01, batch_size=100)
     
-    # Set the number of episodes and steps
+    #Choose number of episodes and steps
     max_steps = 50
     
-    # Train the agent
+    #Training agent
     rewards, steps = train_dqn(env, agent, num_episodes, max_steps)
     
     # Plot rewards and steps per episode
@@ -64,7 +64,7 @@ for num_episodes in num_episodes_list:
     plt.ylabel('Steps')
     plt.show()
     
-    # Save the trained model
+    #Save trained model
     model_filename = f"model_episodes_{num_episodes}.h5"
     agent.model.save_weights(model_filename)
     print(f"Trained model saved as {model_filename}")
