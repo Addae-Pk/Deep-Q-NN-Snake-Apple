@@ -64,7 +64,7 @@ class SnakeEnv(gym.Env):
             pygame.display.flip()
             clock.tick(10)
     
-            state, reward, done, _ = self.step(self.button_direction)  # Add this line
+            state, reward, done, _ = self.step(self.button_direction)
     
             if done:
                 running = False
