@@ -64,7 +64,7 @@ play on by interacting in the terminal)  b) Directly run  the play_game.py a
         - Python 3.9 or higher
         - Pygame
         - Numpy  
-        - TensorFlow (or any other compatible deep learning library)
+        - TensorFlow (or any other dependent library)
 
         Install the required dependencies: check requirement.txt file to
         install dependencies
